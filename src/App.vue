@@ -66,9 +66,9 @@
     <PHeader :toDoTasks="getToDoTasks().length"/>
     <PForm 
       :tempTask="state.tempTask" 
-      :editTempTask="e => state.tempTask = e.target.value" 
+      :editTempTask="(e) => state.tempTask = e.target.value" 
       :submitTask="submitTask"
-      :changeFilter="e => state.filter = e.target.value"
+      :changeFilter="(e) => state.filter = e.target.value"
     />
     <TaskList 
       :tasks="getFilteredTasks()"
